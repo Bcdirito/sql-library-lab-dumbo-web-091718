@@ -1,5 +1,7 @@
 def select_books_titles_and_years_in_first_series_order_by_year
-  
+  "SELECT title, year
+  FROM BOOKS
+  WHERE books.series_id == 1"
 end
 
 def select_name_and_motto_of_char_with_longest_motto
@@ -22,3 +24,5 @@ end
 def select_character_names_and_number_of_books_they_are_in
   
 end
+
+
