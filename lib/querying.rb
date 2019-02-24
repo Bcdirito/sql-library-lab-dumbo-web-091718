@@ -42,7 +42,8 @@ def select_character_names_and_number_of_books_they_are_in
   "SELECT name, COUNT(character_books)
   FROM characters
   JOIN character_books
-  WHERE characters.id == character_books.chara"
+  WHERE characters.id == character_books.character_id
+  GROUP BY character_id"
 end
 
 
