@@ -24,8 +24,8 @@ end
 def select_name_and_series_subgenres_of_authors
   "SELECT authors.name, subgenres.name
   FROM authors
-  JOIN authors
-  ON series.author_id == authors.id"
+  JOIN subgenres
+  ON authors.id == subgenres.series_id.authors_id"
 end
 
 def select_series_title_with_most_human_characters
@@ -35,6 +35,17 @@ end
 def select_character_names_and_number_of_books_they_are_in
   
 end
+
+
+
+def select_name_and_motto_of_char_with_longest_motto
+  "SELECT name, motto
+  FROM characters
+  ORDER BY LENGTH(motto) DESC
+  LIMIT 1;"
+end
+
+
 
 
 
